@@ -11,10 +11,11 @@ scorers = 'Ruud Gullit ' + str(32) + ', Marco van Basten ' + str(54)
 report = f'Ruud Gullit scored in the {goal_0}nd minute\nMarco van Basten scored in the {goal_1}th minute' 
 print(report)
 player ='Ruud Gullit'
-first_name = (player[0:4])  # https://www.w3schools.com/python/python_strings_slicing.asp
-last_name_len = len(player[5:11])  #https://www.w3schools.com/python/ref_func_len.asp
-name_short = 'R. Gullit'
-chant = ('Ruud! ')*3 + ('Ruud!')*1
+first_name = player[:player.find(' ')]  
+last_name = player[player.find(' '):]                # https://www.w3schools.com/python/python_strings_slicing.asp
+last_name_len =len(last_name[1:11])                 #https://www.w3schools.com/python/ref_func_len.asp
+name_short = first_name[0]+'.'+ last_name
+chant = (first_name+'! ')*3 + (first_name+'!')*1
 good_chant = (2!=3) 
 print(first_name)
 print(last_name_len)
